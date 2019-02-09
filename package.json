@@ -22,8 +22,7 @@
   ],
   "contributors": [
     "Burak Can <neoberg@gmail.com> (https://github.com/burakcan)",
-    "Mehmet Kamil Morcay <mehmetmorcay@gmail.com> (https://github.com/mkg0)",
-    "Engin Semih Basmacı <semih.basmaci@gmail.com> (https://github.com/mortargrind)"
+    "Mehmet Kamil Morcay <mehmetmorcay@gmail.com> (https://github.com/mkg0)"
   ],
   "license": "MIT",
   "repository": {
@@ -65,8 +64,6 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.1.4",
     "normalize.css": "^7.0.0",
-    "postcss": "^7.0.1",
-    "postcss-cli": "^6.0.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.10",
     "precss": "^2.0.0",
