@@ -78,15 +78,17 @@ class Month extends PureComponent {
                   isToday={isSameDay(day, now)}
                   isStartOfWeek={isSameDay(day, startOfWeek(day, this.props.dateOptions))}
                   isEndOfWeek={isSameDay(day, endOfWeek(day, this.props.dateOptions))}
-                  isStartOfMonth={isStartOfMonth}
-                  isEndOfMonth={isEndOfMonth}
+                  isStartOfMonth={this.props.disablePassive ? false : isStartOfMonth}
+                  isEndOfMonth={this.props.disablePassive ? false : isEndOfMonth}
                   key={index}
                   disabled={isOutsideMinMax}
                   isPassive={
-                    !isWithinInterval(day, {
-                      start: monthDisplay.startDateOfMonth,
-                      end: monthDisplay.endDateOfMonth,
-                    })
+                    this.props.disablePassive
+                      ? false
+                      : !isWithinInterval(day, {
+                          start: monthDisplay.startDateOfMonth,
+                          end: monthDisplay.endDateOfMonth,
+                        })
                   }
                   styles={styles}
                   onMouseDown={this.props.onDragSelectionStart}
@@ -129,6 +131,7 @@ Month.propTypes = {
   monthDisplayFormat: PropTypes.string,
   showWeekDays: PropTypes.bool,
   showMonthName: PropTypes.bool,
+  disablePassive: PropTypes.bool,
 };
 
 export default Month;

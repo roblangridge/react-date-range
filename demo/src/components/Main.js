@@ -316,6 +316,30 @@ export default class Main extends Component {
             className={'centered'}
           />
         </Section>
+        <Section title="DateRangePicker - disable passive dates">
+          <div>
+            <input
+              type="text"
+              readOnly
+              value={formatDateDisplay(this.state.dateRangePicker.selection.startDate)}
+            />
+            <input
+              type="text"
+              readOnly
+              value={formatDateDisplay(this.state.dateRangePicker.selection.endDate)}
+            />
+          </div>
+          <div>
+            <DateRangePicker
+              onChange={this.handleRangeChange.bind(this, 'dateRangePicker')}
+              showSelectionPreview={true}
+              moveRangeOnFirstSelection={false}
+              className={'PreviewArea'}
+              ranges={[this.state.dateRangePicker.selection]}
+              disablePassive={true}
+            />
+          </div>
+        </Section>
       </main>
     );
   }

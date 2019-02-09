@@ -485,6 +485,7 @@ Calendar.defaultProps = {
   minDate: addYears(new Date(), -100),
   rangeColors: ['#3d91ff', '#3ecf8e', '#fed14c'],
   dragSelectionEnabled: true,
+  disablePassive: false,
 };
 
 Calendar.propTypes = {
@@ -529,6 +530,7 @@ Calendar.propTypes = {
   navigatorRenderer: PropTypes.func,
   rangeColors: PropTypes.arrayOf(PropTypes.string),
   dragSelectionEnabled: PropTypes.bool,
+  disablePassive: PropTypes.bool,
 };
 
 export default Calendar;
