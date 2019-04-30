@@ -6,10 +6,16 @@
   cursor: pointer;
 }
 
+@supports (-ms-ime-align: auto) {
+  .rdrDay {
+    flex-basis: 14.285% !important;
+  }
+}
+
 .rdrDayNumber {
   display: block;
   position: relative;
-  span{
+  span {
     color: #1d2429;
   }
 }
@@ -18,17 +24,24 @@
   cursor: not-allowed;
 }
 
-
-.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge{
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
   pointer-events: none;
 }
 
-.rdrInRange{}
+.rdrInRange {
+}
 
-.rdrDayStartPreview, .rdrDayInPreview, .rdrDayEndPreview{
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
   pointer-events: none;
 }
 
-.rdrDayHovered{}
+.rdrDayHovered {
+}
 
-.rdrDayActive{}
+.rdrDayActive {
+}
