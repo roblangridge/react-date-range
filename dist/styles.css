@@ -161,12 +161,19 @@
   cursor: pointer;
 }
 
+@supports (-ms-ime-align: auto) {
+  .rdrDay {
+    -ms-flex-preferred-size: 14.285% !important;
+        flex-basis: 14.285% !important;
+  }
+}
+
 .rdrDayNumber {
   display: block;
   position: relative;
 }
 
-.rdrDayNumber span{
+.rdrDayNumber span {
     color: #1d2429;
   }
 
@@ -174,19 +181,22 @@
   cursor: not-allowed;
 }
 
-.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge{
+.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge {
   pointer-events: none;
 }
 
-.rdrInRange{}
+.rdrInRange {
+}
 
-.rdrDayStartPreview, .rdrDayInPreview, .rdrDayEndPreview{
+.rdrDayStartPreview, .rdrDayInPreview, .rdrDayEndPreview {
   pointer-events: none;
 }
 
-.rdrDayHovered{}
+.rdrDayHovered {
+}
 
-.rdrDayActive{}
+.rdrDayActive {
+}
 
 .rdrDateRangePickerWrapper{
   display: -webkit-inline-box;
